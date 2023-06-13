@@ -1,0 +1,17 @@
+CREATE DATABASE backup_system;
+
+USE backup_system;
+
+-- Table for storing user information
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Table for storing backup data
+CREATE TABLE backup_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
